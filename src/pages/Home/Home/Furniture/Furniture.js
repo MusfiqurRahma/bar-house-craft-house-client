@@ -1,15 +1,15 @@
-import React from 'react';
 import { Avatar, Button, Grid, Paper, Typography } from '@mui/material';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Explore = (props) => {
-    const { name, description, image, price, discountPrice, _id } = props.explore;
+const Furniture = (props) => {
+    const { name, img,desc,price,stock,_id} = props.furniture;
     return (
         <Grid item xs={12} md={4}>
         <Paper elevation={3} sx={{p:6}}>
         <Avatar
-          alt=""
-          src={image}
+          alt="Remy Sharp"
+          src={img}
           sx={{ width: 200, height: 200,m:'auto'}}
          />
             <Typography variant='h5'
@@ -22,7 +22,7 @@ const Explore = (props) => {
             
             <Typography variant='body2'
                 sx={{ color: '#9c5938' }}>
-                {description.slice(0, 300)}
+                {desc.slice(0, 300)}
                 ..<italic style={{color:'red'}}>Read More</italic>
             </Typography>
             
@@ -30,29 +30,28 @@ const Explore = (props) => {
                 display: 'flex',
                 justifyContent: 'space-evenly'
             }}>
-                <Typography variant='h5'>
-                    <s style={{
+                <Typography variant='p'  style={{
                              fontWeight: '900',
                              color: '#99402c'
-                            }}>${price}</s>
+                            }}>
+                   Price: ${price}     ~
                 </Typography>
                 
-                <Typography variant='h5'
+                <Typography variant='p'
                     sx={{
                         fontWeight: '900',
                         color: '#99402c'}}>
-                ${discountPrice}
-                </Typography>
-                
+                  Stock: {stock}
+                </Typography> <br/> <br/>              
             </div>
-            <Link to={`/purchaseProducts/${_id}`} style={{textDecoration:'none'}}>
+            <Link to={`/purchaseFurniture/${_id}`} style={{textDecoration:'none'}}>
             <Button
                 variant='contained'
                 sx={{ backgroundColor: '#574437'}}>Purchase Now</Button>
             </Link>
-        </Paper>
-      </Grid>
+     </Paper>
+</Grid>
     );
 };
 
-export default Explore;
+export default Furniture;
