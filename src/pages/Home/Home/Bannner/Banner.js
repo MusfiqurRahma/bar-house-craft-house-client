@@ -18,8 +18,8 @@ const style = {
 
 const Banner = () => {
     return (
-      <>  <Grid container spacing={2} sx={{mt:9,backgroundColor:'gray',p:10}} style={style}>
-        <Grid item xs={12} md={6} sx={{mt:8}}>
+      <>  <Grid container spacing={2} sx={{backgroundColor:'gray',p:10,mt:0}} style={style}>
+        <Grid item xs={12} md={6} sx={{mt:5}}>
          <Typography variant='h3' style={{fontWeight:'800'}}>
             <span style={{color:'#e1c265',fontWeight:'900',fontSize:'80px'}}>Craft</span> <br /> Wooden Houses      
          </Typography>

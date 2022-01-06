@@ -1,5 +1,6 @@
 import { BrowserRouter,Switch,Route} from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import AuthProvider from './pages/Context/AuthProvider';
 import Home from './pages/Home/Home';
 import BathroomFeetings from './pages/Home/Home/BathroomFeetings/BathroomFeetings';

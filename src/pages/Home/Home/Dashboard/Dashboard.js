@@ -119,19 +119,19 @@ function Dashboard(props) {
        </Box> :
          <Box>
 
-             <List>
+           <List>
         <Link to='/home' style={style}>
            <Button><HomeIcon />Home</Button>
         </Link>        
            </List>
            
-      <List>
+           <List>
         <Link to='/myOrder' style={style}>
            <Button><ShoppingBagIcon />My Orders</Button>
         </Link>       
            </List>
            
-      <List>
+         <List>
         <Link to='/addReviews' style={style}>
            <Button><ReviewsIcon />Review</Button>
         </Link>       
