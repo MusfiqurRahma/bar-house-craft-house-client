@@ -1,10 +1,10 @@
 import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
-
 import { NavLink,useHistory } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 import Navigation from '../../../../Shared/Navigation/Navigation';
 import RegisterBanner from '../../../../../image/register.jpg';
+import Footer from '../../../../Shared/Footer/Footer';
 
 
 
@@ -30,10 +30,11 @@ const Register = () => {
     }
 
     return (
-        <Container>
+        <>
             <Navigation></Navigation>
+            <Container>
             <Grid container spacing={2} sx={{ mt: 10 }}>
-                <Grid item xs={12} md={6}  style={{border:'1px solid gray',marginTop:'50px',backgroundColor:'#e1c265',color:'white'}}>
+                <Grid item xs={12} md={6}  style={{border:'1px solid gray',marginTop:'50px',backgroundColor:'#e1c265',color:'white',marginBottom:'40px'}}>
                     <Typography variant="h4" gutterBottom>Please create an account</Typography> <hr />
                     {!isLoading && <form onSubmit={handleLoginSubmit}>
                         <TextField
@@ -83,7 +84,9 @@ const Register = () => {
                     <img style={{ width: '100%',marginTop:'5%' }} src={RegisterBanner} alt="" />
                 </Grid>
             </Grid>
-        </Container>
+            </Container>
+            <Footer></Footer>
+            </>
     );
 };
 

@@ -3,6 +3,8 @@ import loginBanner from '../../../../../image/login.jpg';
 import { useState } from 'react';
 import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import { NavLink,useLocation,useHistory } from 'react-router-dom';
+import Navigation from '../../../../Shared/Navigation/Navigation';
+import Footer from '../../../../Shared/Footer/Footer';
 
 
 const Login = () => {
@@ -28,9 +30,9 @@ const Login = () => {
         signInWithGoogle(location, history)
     }
     return (
-        <Container>
+       <><Navigation></Navigation><Container>
         <Grid container spacing={2}>
-            <Grid item sx={{ mt: 8 }} xs={12} md={6}  style={{border:'1px solid gray',marginTop:'50px',backgroundColor:'#e1c265',color:'#14539a',padding:'20px'}}>
+            <Grid item sx={{ mt: 8 }} xs={12} md={6}  style={{border:'1px solid gray',marginTop:'50px',backgroundColor:'#e1c265',color:'#14539a',padding:'20px',marginBottom:'30px'}}>
                 <Typography variant="h4" gutterBottom>Please Login</Typography> <hr />
                 <form onSubmit={handleLoginSubmit}>
                     <TextField
@@ -66,7 +68,9 @@ const Login = () => {
                 <img style={{ width: '100%' }} src={loginBanner} alt="" />
             </Grid>
         </Grid>
-    </Container>
+        </Container>
+            <Footer></Footer>
+        </>
     );
 };
 
