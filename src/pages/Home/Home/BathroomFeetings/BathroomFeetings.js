@@ -9,7 +9,7 @@ const BathroomFeetings = () => {
     const [bathroomFeetings, setbathroomFetings] = useState([]);
     
     useEffect(() => {
-        fetch('http://localhost:5000/bathroomFeetings')
+        fetch('https://stormy-wave-87937.herokuapp.com/bathroomFeetings')
             .then(res => res.json())
             .then(data => setbathroomFetings(data));
     }, []);
@@ -18,7 +18,10 @@ const BathroomFeetings = () => {
         <div>
             <Navigation></Navigation>
             <Container sx={{ flexGrow: 1,p:5,mt:5}}>
-            <h2>Our Available Bathroom Feetings Services</h2>
+                <h2 style={{
+                    paddingBottom: '30px',
+                    fontFamily: 'Playfair Display, sans-serif', fontWeight: '900'
+                }}>Our Available Bathroom Feetings Services</h2>
             <Grid container spacing={2}>
                 {
                     bathroomFeetings.map(bathroomFeeting => <BathroomFeeting

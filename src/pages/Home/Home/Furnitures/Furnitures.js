@@ -8,7 +8,7 @@ const Furnitures = () => {
     const [furnitures, setFurnitures] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/addFurniture')
+        fetch('https://stormy-wave-87937.herokuapp.com/addFurniture')
             .then(res => res.json())
             .then(data => setFurnitures(data));
     },[])
@@ -17,7 +17,7 @@ const Furnitures = () => {
         <div>
              <Navigation></Navigation>
          <Container sx={{ flexGrow: 1,p:5,mt:5}}>
-         <Typography variant='h3' sx={{mb:6,fontWeight:900}}>Our available Furnitures</Typography>
+         <Typography variant='h3' sx={{mb:6,fontWeight:900,fontFamily: 'Playfair Display, sans-serif'}}>Our available Furnitures</Typography>
         <Grid container spacing={2}>
             {
                 furnitures.map(furniture => <Furniture

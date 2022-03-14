@@ -8,7 +8,7 @@ const CcTvs = () => {
     const [ccTvs, setccTvs] = useState([]);
     
     useEffect(() => {
-        fetch('http://localhost:5000/ccTv')
+        fetch('https://stormy-wave-87937.herokuapp.com/ccTv')
             .then(res => res.json())
             .then(data => setccTvs(data));
     },[])
@@ -16,7 +16,7 @@ const CcTvs = () => {
         <div>
              <Navigation></Navigation>
             <Container sx={{ flexGrow: 1,p:5,mt:5}}>
-                <h2>Our Available CCTV Items</h2>
+                <h2 style={{fontFamily: 'Playfair Display, sans-serif',paddingBottom:'25px',fontWeight:'900'}}>Our Available CCTV Items</h2>
             <Grid container spacing={2}>
                 {
                     ccTvs.map(ccTv => <CcTv

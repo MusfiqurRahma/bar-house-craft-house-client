@@ -15,7 +15,7 @@ const style = {
 const AddInteriorDesign = () => {
     const { register, handleSubmit,reset} = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/interiorDesign', {
+        fetch('https://stormy-wave-87937.herokuapp.com/interiorDesign', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

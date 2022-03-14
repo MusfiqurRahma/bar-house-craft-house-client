@@ -8,7 +8,7 @@ const SolarEnergies = () => {
     const [solarEnergies, setsolarEnergies] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/solarEnergy')
+        fetch('https://stormy-wave-87937.herokuapp.com/solarEnergy')
             .then(res => res.json())
             .then(data => setsolarEnergies(data));
     },[])
@@ -16,7 +16,7 @@ const SolarEnergies = () => {
         <div>
         <Navigation></Navigation>
          <Container sx={{ flexGrow: 1,p:5,mt:5}}>
-         <Typography variant='h3' sx={{mb:6,fontWeight:900}}>Our available Solar Energy Products</Typography>
+         <Typography variant='h3' sx={{mb:6,fontWeight:900,fontFamily: 'Playfair Display, sans-serif'}}>Our available Solar Energy Products</Typography>
         <Grid container spacing={2}>
             {
                 solarEnergies.map(solar => <SolarEnergy

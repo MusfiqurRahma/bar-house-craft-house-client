@@ -13,14 +13,14 @@ const PurchaseInterior = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/purchaseInterior/${interiorId}`)
+        fetch(`https://stormy-wave-87937.herokuapp.com/purchaseInterior/${interiorId}`)
             .then(res => res.json())
             .then(data=>setPurchase(data[0]))
     }, [interiorId])
   
       const { register, handleSubmit} = useForm();
       const onSubmit = data => {
-          fetch("http://localhost:5000/confirmOrder", {
+          fetch("https://stormy-wave-87937.herokuapp.com/confirmOrder", {
               method: "POST",
               headers: { "content-type": "application/json" },
               body: JSON.stringify(data),
@@ -68,23 +68,46 @@ const PurchaseInterior = () => {
                     
           </Grid>
          <Grid item xs={12} md={6}>           
-          <form onSubmit={handleSubmit(onSubmit)} style={{display:"flex",flexDirection:'column',width:'40%',margin:'auto'}}>
+            <form onSubmit={handleSubmit(onSubmit)} style={{
+              display: "flex",
+              flexDirection: 'column',
+              width: '40%',
+              margin: 'auto'
+            }}>
             <input
                 {...register("name")}
                 defaultValue={purchase?.name}
-                style={{width:'150%',padding:'15px',margin:'5px',borderRadius:'5px'}}
+                style={{
+                  width: '180%',
+                  padding: '15px',
+                  margin: '5px',
+                  borderRadius: '5px',
+                  border:'1px solid #f5831b'
+                }}
               />
                 
               <input
                 {...register("Name")}
                  placeholder="Your Name"
-                style={{width:'150%',padding:'15px',margin:'5px',borderRadius:'5px'}}
+                 style={{
+                  width: '180%',
+                  padding: '15px',
+                  margin: '5px',
+                  borderRadius: '5px',
+                  border:'1px solid #f5831b'
+                }}
                 defaultValue={user?.displayName}            
               />
                 <input
               {...register("Email")}
                 placeholder="Email"
-                style={{width:'150%',padding:'15px',margin:'5px',borderRadius:'5px'}}
+                style={{
+                  width: '180%',
+                  padding: '15px',
+                  margin: '5px',
+                  borderRadius: '5px',
+                  border:'1px solid #f5831b'
+                }}
                 type="email"
                 defaultValue={user?.email}     
               />
@@ -92,22 +115,46 @@ const PurchaseInterior = () => {
               <input
                 {...register("Address")}
                  placeholder="Address"
-                style={{width:'150%',padding:'15px',margin:'5px',borderRadius:'5px'}}          
+                 style={{
+                  width: '180%',
+                  padding: '15px',
+                  margin: '5px',
+                  borderRadius: '5px',
+                  border:'1px solid #f5831b'
+                }}          
               />
                  <input
                 {...register("date")}
                 type="date"
-                style={{width:'150%',padding:'15px',margin:'5px',borderRadius:'5px'}}            
+                style={{
+                  width: '180%',
+                  padding: '15px',
+                  margin: '5px',
+                  borderRadius: '5px',
+                  border:'1px solid #f5831b'
+                }}            
               />
                <input
                 {...register("number", { required: true })}
-                style={{width:'150%',padding:'15px',margin:'5px',borderRadius:'5px'}}
+                style={{
+                  width: '180%',
+                  padding: '15px',
+                  margin: '5px',
+                  borderRadius: '5px',
+                  border:'1px solid #f5831b'
+                }}
                 type="number"
                 placeholder='Phone Number'
               />
                <input
                 {...register("price", { required: true })}
-                style={{width:'150%',padding:'15px',margin:'5px',borderRadius:'5px'}}
+                style={{
+                  width: '180%',
+                  padding: '15px',
+                  margin: '5px',
+                  borderRadius: '5px',
+                  border:'1px solid #f5831b'
+                }}
                 type="number"
                 defaultValue={purchase?.price}
                 placeholder='Discount Price'
@@ -115,11 +162,26 @@ const PurchaseInterior = () => {
                <input
                 {...register("image", { required: true })}
                  defaultValue={purchase?.img}
-                style={{width:'150%',padding:'15px',margin:'5px',borderRadius:'5px'}}
+                 style={{
+                  width: '180%',
+                  padding: '15px',
+                  margin: '5px',
+                  borderRadius: '5px',
+                  border:'1px solid #f5831b'
+                }}
                 placeholder="Image"
               />
                 <input
-                style={{width:'165%',padding:'5px',margin:'5px',borderRadius:'5px',fontSize:'20px',backgroundColor:'#574437',color:'white'}}
+                style={{
+                  width: '180%',
+                  padding: '15px',
+                  margin: '5px',
+                  borderRadius: '5px',
+                  border: '1px solid #f5831b',
+                  background: '#f5831b',
+                  color: 'white',
+                  fontSize:'20px'
+                }}
                 type="submit"
                 value="Order Here"
               />

@@ -18,54 +18,106 @@ const style = {
 
 const Banner = () => {
     return (
-      <>  <Grid container spacing={2} sx={{backgroundColor:'gray',p:10,mt:0}} style={style}>
-        <Grid item xs={12} md={6} sx={{mt:5}}>
-         <Typography variant='h3' style={{fontWeight:'800'}}>
-            <span style={{color:'#e1c265',fontWeight:'900',fontSize:'80px'}}>Craft</span> <br /> Wooden Houses      
+          <>  <Grid container spacing={2} sx={{
+                backgroundColor: 'gray',
+                p: 10, mt: 0
+          }} style={style}>
+                <Grid item xs={12}
+                      md={6}
+                      sx={{ mt: 5 }}>
+                      <Typography variant='h3'
+                            style={{ fontWeight: '800', fontFamily: 'Playfair Display, sans-serif',  }}>
+                            <span
+                                  style={{
+                                        color: '#010101',
+                                        fontWeight: '900',
+                                        fontSize: '80px',
+                                        fontFamily: 'Playfair Display, sans-serif', 
+                                  }}>Craft</span> <br /> Wooden Houses
          </Typography>
-         <Typography variant='h6'>
+                      <Typography variant='h6' sx={{
+                            fontFamily: 'Playfair Display, sans-serif',
+                            fontWeight: '600'
+                      }}>
              We are always ready to deliver quality
              wooden house to you.
          </Typography>
-        <Link to='/explores' style={{textDecoration:'none'}}> <Button sx={{color:'white',mt:3,backgroundColor:'#e1c265'}} variant="outlined" size="large">
+                      <Link to='/explores' style={{ textDecoration: 'none' }}> <Button sx={{
+                            color: 'white',
+                            mt: 3,
+                            backgroundColor: '#e1c265'
+                      }} variant="outlined" size="large">
           Explore More
         </Button>
         </Link>
         </Grid>
         <Grid item xs={12} md={6}>
-          <img height='100%' width='100%' src={BannerImage} alt="" />
+          <img height='100%' width='100%' style={{borderRadius:'10px'}} src={BannerImage} alt="" />
          </Grid>
       </Grid>
       <Grid container spacing={2} sx={{backgroundColor:'#1f1a17'}}>
       <Grid item xs={12} md={2}>
             <img src={offers1} alt="" />
             <Typography variant='h6' sx={{ color: 'white' }}>Eco Materials</Typography>
-           <Link to='/ecomaterials'> <Button sx={{backgroundColor:'#e1c265'}}>Available Items</Button></Link>
+                            <Link style={{textDecoration: 'none'}} to='/ecomaterials'> <Button sx={{
+                                  backgroundColor: '#e1c265',
+                                  color: 'white',
+                                  border: 'solid 1px #e1c265',
+                                  marginY: 3,
+                                  textDecoration: 'none'
+                            }}>Available Items</Button></Link>
       </Grid>
       <Grid item xs={12} md={2}>
             <img src={offers2} alt="" />
             <Typography variant='h6' sx={{ color: 'white' }}>Solar Energy</Typography>
-            <Link to='/solarenergy'><Button sx={{backgroundColor:'#e1c265'}}>Available Items</Button></Link>
+                            <Link style={{textDecoration: 'none'}} to='/solarenergy'><Button sx={{
+                                  backgroundColor: '#e1c265',
+                                  color: 'white',
+                                  border: 'solid 1px #e1c265',
+                                  marginY: 5,
+                            }}>Available Items</Button></Link>
       </Grid>
       <Grid item xs={12} md={2}>
             <img src={offers3} alt="" />
             <Typography variant='h6' sx={{ color: 'white' }}>Furniture</Typography>
-            <Link to='/furniture'><Button sx={{backgroundColor:'#e1c265'}}>Available Items</Button></Link>
+                            <Link style={{ textDecoration: 'none' }} to='/furniture'><Button sx={{
+                                  backgroundColor: '#e1c265',
+                                  color: 'white',
+                                  border: 'solid 1px #e1c265',
+                                  marginY: 3, textDecoration: 'none'
+                            }}>Available Items</Button></Link>
       </Grid>
       <Grid item xs={12} md={2}>
             <img src={offers4} alt="" />
             <Typography variant='h6' sx={{ color: 'white' }}>Bathroom Feetings</Typography>
-           <Link to='/bathroomfeetings'><Button sx={{backgroundColor:'#e1c265'}}>Available Items</Button></Link>
+                            <Link style={{ textDecoration: 'none' }} to='/bathroomfeetings'><Button sx={{
+                                  backgroundColor: '#e1c265',
+                                  color: 'white',
+                                  border: 'solid 1px #e1c265',
+                                  marginY: 3,
+                                  textDecoration: 'none'
+                            }}>Available Items</Button></Link>
       </Grid>
       <Grid item xs={12} md={2}>
-            <img src={offers5} alt="" />
+            <img src={offers5} alt="" /> <br />
             <Typography variant='h6' sx={{ color: 'white' }}>CCTV Reply</Typography> <br/>
-            <Link to='/cctv'><Button sx={{backgroundColor:'#e1c265'}}>Available Items</Button></Link>
+                            <Link style={{textDecoration: 'none'}} to='/cctv'><Button sx={{
+                                  backgroundColor: '#e1c265', color: 'white',
+                                  border: 'solid 1px #e1c265',
+                                  marginY: 3,
+                                  textDecoration: 'none'
+                            }}>Available Items</Button></Link>
       </Grid>
       <Grid item xs={12} md={2}>
             <img src={offers6} alt="" />
             <Typography variant='h6' sx={{ color: 'white' }}>Interior Design</Typography>
-            <Link to='/interior'><Button sx={{backgroundColor:'#e1c265'}}>Available Items</Button></Link>
+                            <Link style={{textDecoration: 'none'}} to='/interior'><Button sx={{
+                                  backgroundColor: '#e1c265',
+                                  color: 'white',
+                                  border: 'solid 1px #e1c265',
+                                  marginY: 3,
+                                  textDecoration: 'none'
+                            }}>Available Items</Button></Link>
        </Grid>
        </Grid> </>
     );

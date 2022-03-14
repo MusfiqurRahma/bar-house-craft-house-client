@@ -16,12 +16,14 @@ const WorkStage = () => {
                     <Typography variant='h4'
                         sx={{
                             color: '#544438',
-                            fontWeight: '900'
+                            fontWeight: '900',
+                            fontSize:'40px',
+                            fontFamily: 'Playfair Display, sans-serif', 
                         }}>Stages of <span
-                            style={{ color: '#e1c265' }}>our work</span>
+                            style={{ color: '#e1c265' }}>Our Work</span>
                     </Typography>
                     <Typography variant='h6'
-                        sx={{ color: '#544438' }}>We select the most high-quality wood materials, which have a very long life in any climatic conditions..
+                        sx={{ color: '#544438'}}>We select the most high-quality wood materials, which have a very long life in any climatic conditions..
                     </Typography>
                     <Button>Order Now</Button>
                 </Grid>

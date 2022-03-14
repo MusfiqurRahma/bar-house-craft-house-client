@@ -33,16 +33,16 @@ const Footer = () => {
             style={{ backgroundColor: '#e1c265',padding:'10px'}}
             src="https://i.ibb.co/B3nYkvY/logo-small.png"
             alt="" />
-                <Typography variant='body1' sx={{ color: '#e1c265' }}>We have over 10 years of experience, We take pride in delivering Intelligent Designs for clients all over the World.</Typography>
+                <Typography variant='body1' sx={{ color: '#e1c265', fontFamily: 'Playfair Display, sans-serif',}}>We have over 10 years of experience, We take pride in delivering Intelligent Designs for clients all over the World.</Typography>
          <Button style={{color:'#e1c265'}}>Subscribe Us</Button>        
         </Grid>
         <Grid item xs={12} md={3}>
-          <Typography variant='h4' sx={{color:'#e1c265',fontWeight:'800'}}>
+          <Typography variant='h4' sx={{color:'#e1c265',fontWeight:'800',fontFamily: 'Playfair Display, sans-serif', }}>
                Services         
                 </Typography> <hr/>
-                <List sx={{color:'#e1c265'}}>
-                    <ListItemText>All Services</ListItemText>
-                    <ListItemText>General Carpentry</ListItemText>
+                <List sx={{color:'#e1c265' }}>
+                    <ListItemText style={{ fontFamily: 'Playfair Display, sans-serif', }}>All Services</ListItemText>
+                    <ListItemText sx={{ fontFamily: 'Playfair Display, sans-serif', }}>General Carpentry</ListItemText>
                     <ListItemText>Manufacturer Furniture</ListItemText>
                     <ListItemText>Hang Paintings</ListItemText>
                     <ListItemText>Commercial Work</ListItemText>
@@ -50,21 +50,32 @@ const Footer = () => {
                 </List>
         </Grid>
         <Grid item xs={12} md={3}>
-        <Typography variant='h4' sx={{color:'#e1c265',fontWeight:'800'}}>
+          <Typography variant='h4' sx={{
+            color: '#e1c265',
+            fontWeight: '800',
+            fontFamily: 'Playfair Display, sans-serif'
+          }}>
                Contact Us         
                 </Typography> <hr />
                 <List sx={{color:'#e1c265'}}>
                     <ListItemText> <LocationOnIcon /> Dhanmondi 32,Dhaka City,Bangladesh</ListItemText>
                     <ListItemText> <AddIcCallTwoToneIcon /> +8801700000000; +01209090</ListItemText>
-                    <ListItemText><AttachEmailTwoToneIcon/> barhouse@barhouse.us</ListItemText>
+                    <ListItemText><AttachEmailTwoToneIcon/> barhouse@gmail.com</ListItemText>
                     <ListItemText><FacebookTwoToneIcon/> barhouse</ListItemText>
                 </List>
         </Grid>
         <Grid item xs={12} md={3}>
-        <Typography variant='h4' sx={{color:'#e1c265',fontWeight:'800'}}>
+          <Typography variant='h4' sx={{
+            color: '#e1c265',
+            fontWeight: '800',
+            fontFamily: 'Playfair Display, sans-serif', 
+          }}>
                Newsletter        
                 </Typography> <hr />
-        <Typography variant='body1'sx={{color:'#e1c265'}}>
+          <Typography variant='body1' sx={{
+            color: '#e1c265',
+            fontFamily: 'Playfair Display, sans-serif',
+          }}>
         Stay up to date. Follow our latest news, Carpentry tips and special offers.        
                 </Typography>
                 <Box sx={{ '& > :not(style)': { m: 1,backgroundColor:'#e1c265' } }}>
@@ -90,7 +101,12 @@ const Footer = () => {
             </Grid>
         </Grid>
         <Box>
-        <Typography sx={{backgroundColor:'#1d1815',color:'white',padding:'10px'}}>&copy;2021--All Rights are Reserved By &trade; Bar-House || Created &hearts; By Musfiqur Rahman</Typography>
+          <Typography sx={{
+            backgroundColor: '#1d1815',
+            color: 'white',
+            padding: '10px',
+            fontFamily: 'Playfair Display SC, serif'
+          }}>&copy;2021 ~ @Bar-House || Designed & Developed &hearts; By Musfiqur Rohoman</Typography>
         </Box> </>
     );
 };
